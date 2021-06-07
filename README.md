@@ -1,4 +1,4 @@
-# AspNetCoreEfCoreCosmosTesting
+# ASP.NET Core EF Core Cosmos Database testing
 
 ## Links
 
