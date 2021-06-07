@@ -7,8 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreCosmos", "AspNetC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{200E9DAA-F5C5-4A52-A21F-360727A8A411}"
 	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreCosmos.DbTests", "AspNetCoreCosmos.DbTests\AspNetCoreCosmos.DbTests.csproj", "{DD7BD31F-47A0-45BA-BD03-4F5A13AF1615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +23,10 @@ Global
 		{FAE5A2DF-F05C-4222-A47D-E49EF2879E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE5A2DF-F05C-4222-A47D-E49EF2879E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE5A2DF-F05C-4222-A47D-E49EF2879E84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD7BD31F-47A0-45BA-BD03-4F5A13AF1615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD7BD31F-47A0-45BA-BD03-4F5A13AF1615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD7BD31F-47A0-45BA-BD03-4F5A13AF1615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD7BD31F-47A0-45BA-BD03-4F5A13AF1615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
