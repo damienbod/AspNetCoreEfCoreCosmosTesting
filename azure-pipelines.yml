@@ -6,13 +6,11 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'windows-latest'
-
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  vmImage: 'windows-latest'
 
 stages:
 - stage: Build
