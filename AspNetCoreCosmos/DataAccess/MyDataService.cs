@@ -1,4 +1,8 @@
-﻿namespace AspNetCoreCosmos.DataAccess
+﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace AspNetCoreCosmos.DataAccess
 {
     public class MyDataService
     {
@@ -12,6 +16,17 @@
         public void EnsureCreated()
         {
             _cosmosContext.Database.EnsureCreated();
+        }
+
+        public async Task CreateAsync(MyData myData)
+        {
+            await _cosmosContext.MyData.AddAsync(myData);
+            await _cosmosContext.SaveChangesAsync(false);
+        }
+
+        public async Task<MyData> Get(string id)
+        {
+            return await _cosmosContext.MyData.FirstAsync(d => d.Id == id);
         }
     }
 }

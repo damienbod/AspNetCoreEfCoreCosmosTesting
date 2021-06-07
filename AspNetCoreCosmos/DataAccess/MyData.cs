@@ -6,5 +6,6 @@
         public string PartitionKey { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string ETag { get; internal set; }
     }
 }

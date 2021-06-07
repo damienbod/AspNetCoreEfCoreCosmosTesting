@@ -4,6 +4,8 @@ namespace AspNetCoreCosmos.DataAccess
 {
     public class CosmosContext : DbContext
     {
+        public CosmosContext(DbContextOptions<CosmosContext> options) : base(options)
+        { }
         public DbSet<MyData> MyData { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -17,7 +19,8 @@ namespace AspNetCoreCosmos.DataAccess
                 .HasPartitionKey(o => o.PartitionKey);
 
             modelBuilder.Entity<MyData>()
-                .UseETagConcurrency();
+                .Property(d => d.ETag)
+                .IsETagConcurrency();
         }
     }
 }
